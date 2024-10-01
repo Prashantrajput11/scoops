@@ -16,12 +16,8 @@ export const Button = ({
 		<Pressable
 			disabled={disabled || loading}
 			onPress={onPress}
-			style={tw.style(
-				"btn-primary",
-				disabled && "bg-primary-500",
-				btnStyle,
-				btnProps
-			)}
+			style={tw.style("btn-primary", disabled && "bg-primary-500", btnStyle)}
+			{...btnProps}
 		>
 			<Text style={tw.style(" btn-text text-white")}>{title}</Text>
 		</Pressable>
